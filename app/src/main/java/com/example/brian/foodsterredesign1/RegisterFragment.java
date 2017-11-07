@@ -81,7 +81,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     }
 
-
+	// KOMMENTAR HINZUGEFÜGT 07.11.2017
     @Override
     public void onStart() {
         super.onStart();
