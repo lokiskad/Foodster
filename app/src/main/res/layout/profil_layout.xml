@@ -1,71 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:id="@+id/profil_layout">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/profilLayout_etName"
-        android:layout_marginBottom="34dp"
-        android:hint="Name"
-        android:layout_above="@+id/etGeb"
-        android:layout_alignEnd="@+id/editProfil_buttonLogout" />
+    <!-- TODO: Update blank fragment layout -->
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/etGeb"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/profilLayout_etName"
-        android:inputType="date"
-        android:hint="Geburtsdatum" />
 
-    <Button
-        android:text="Logout"
+    <TextView
+        android:id="@+id/tvsp_profileby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editProfil_buttonLogout"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Profil von:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/tvsp_Pname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvsp_profileby"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvsp_Hname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvsp_Pname"
+        android:layout_marginTop="77dp"
+        android:layout_toStartOf="@+id/tvsp_profileby"
+        android:text="Name:" />
+
+    <TextView
+        android:id="@+id/tvsp_Hsurname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvsp_Hname"
+        android:layout_below="@+id/tvsp_Hname"
+        android:layout_marginTop="25dp"
+        android:text="Vorname:" />
+
+    <TextView
+        android:id="@+id/tvsp_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvsp_Hsurname"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:id="@+id/buttonSpeichern"
+    <TextView
+        android:id="@+id/tvsp_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Speichern"
-        android:layout_above="@+id/editProfil_buttonLogout"
-        android:layout_alignStart="@+id/etGeb" />
-
-    <TextView
-        android:layout_height="50dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/profilLayout_etName"
-        android:layout_marginTop="18dp"
-        android:id="@+id/textName"
-        android:layout_width="200dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/begruessungTW"
-        android:layout_height="40dp"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/textGeb"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textName"
-        android:layout_marginTop="13dp" />
-
+        android:layout_alignBottom="@+id/tvsp_Hsurname"
+        android:layout_alignStart="@+id/tvsp_name" />
 </RelativeLayout>
