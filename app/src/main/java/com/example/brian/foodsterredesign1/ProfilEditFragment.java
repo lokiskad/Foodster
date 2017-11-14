@@ -43,13 +43,15 @@ public class ProfilEditFragment extends Fragment implements View.OnClickListener
     private EditText etSurname;
     private EditText etName;
 
+    private FirebaseUser user;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.profil_edit, container, false);
 
         mAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = mAuth.getCurrentUser();
+        user = mAuth.getCurrentUser();
         uniqueID = user.getUid();
 
         buttonSpeichern = (Button) myView.findViewById(R.id.btpe_Save);
@@ -58,7 +60,7 @@ public class ProfilEditFragment extends Fragment implements View.OnClickListener
         tvSurname = (TextView) myView.findViewById(R.id.tvpe_Surname);
         tvName = (TextView) myView.findViewById(R.id.tvpe_Name);
 
-        etSurname = (EditText) myView.findViewById(R.id.etpe_Name);
+        etSurname = (EditText) myView.findViewById(R.id.etpe_Surname);
         etName = (EditText) myView.findViewById(R.id.etpe_Name);
 
         mUserReference = FirebaseDatabase.getInstance().getReference().child("users");

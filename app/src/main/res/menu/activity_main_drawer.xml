@@ -34,6 +34,10 @@
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Logout" />
+            <item
+                android:id="@+id/nav_receipts"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Rezepte (Noch in Bearbeitung)" />
         </group>
 
 </menu>
