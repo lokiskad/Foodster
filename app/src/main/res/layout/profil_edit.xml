@@ -4,85 +4,85 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:id="@+id/profiledit_layout">
 
-    <EditText
+    <TextView
+        android:id="@+id/tvpe_Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/profilLayout_etName"
-        android:layout_above="@+id/etGeb"
-        android:layout_alignEnd="@+id/editProfil_buttonLogout"
-        android:layout_marginBottom="34dp"
-        android:hint="Name" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Editiere dein Profil"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="36sp" />
 
-    <EditText
+    <TextView
+        android:id="@+id/tvpe_HName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/etGeb"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/profilLayout_etName"
-        android:inputType="date"
-        android:hint="Geburtsdatum" />
-
-    <Button
-        android:text="Logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editProfil_buttonLogout"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/tvpe_Headline"
+        android:layout_below="@+id/tvpe_Headline"
+        android:layout_marginTop="64dp"
+        android:text="Name:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <EditText
+        android:id="@+id/etpe_Name"
         android:layout_width="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:layout_marginTop="25dp"
-        android:id="@+id/infoET"
-        android:layout_height="80dp"
-        android:layout_below="@+id/etGeb"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvpe_HName"
+        android:layout_alignBottom="@+id/tvpe_HName"
         android:layout_alignParentEnd="true"
-        android:hint="Etwas über dich..."
-        android:scrollbars="vertical"
-        android:textAlignment="center"
-        android:layout_alignStart="@+id/etGeb" />
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/editProfil_buttonSpeichern"
+    <TextView
+        android:id="@+id/tvpe_HSurname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/infoET"
-        android:layout_below="@+id/infoET"
-        android:layout_marginTop="19dp"
+        android:layout_alignStart="@+id/tvpe_HName"
+        android:layout_below="@+id/etpe_Name"
+        android:layout_marginTop="57dp"
+        android:text="Vorname:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <EditText
+        android:id="@+id/etpe_Surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvpe_HSurname"
+        android:layout_alignBottom="@+id/tvpe_HSurname"
+        android:layout_alignStart="@+id/etpe_Name"
+        android:ems="10"
+        android:hint="Vorname"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse" />
+
+    <Button
+        android:id="@+id/btpe_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp"
         android:text="Speichern" />
 
     <TextView
-        android:id="@+id/textName"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignStart="@+id/profilLayout_etName"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="18dp"
-        android:text="Profil Edit"
-        android:textSize="30sp" />
+        android:id="@+id/tvpe_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etpe_Name"
+        android:layout_below="@+id/etpe_Name"
+        android:layout_marginTop="11dp" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/begruessungTW"
-        android:layout_height="40dp"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/testGeb"
-        android:layout_below="@+id/textName"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp" />
-
+        android:id="@+id/tvpe_Surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etpe_Surname"
+        android:layout_below="@+id/etpe_Surname"
+        android:layout_marginTop="19dp" />
 </RelativeLayout>

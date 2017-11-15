@@ -62,11 +62,13 @@ public class MainActivity extends AppCompatActivity
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     navigationView.getMenu().setGroupVisible(R.id.group_unregistered, false);
                     navigationView.getMenu().setGroupVisible(R.id.group_registered, true);
+                    changeFragment("profil");
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                     navigationView.getMenu().setGroupVisible(R.id.group_unregistered, true);
                     navigationView.getMenu().setGroupVisible(R.id.group_registered, false);
+                    changeFragment("register");
                 }
                 // ...
             }
@@ -134,24 +136,24 @@ public class MainActivity extends AppCompatActivity
         switch(id)
         {
             case R.id.nav_register_layout:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new RegisterFragment()).commit();
+                changeFragment("register");
                 break;
             case R.id.nav_login_layout:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new LoginFragment()).commit();
+                changeFragment("login");
                 break;
             case R.id.nav_map_layout:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new MapFragment()).commit();
+                changeFragment("maps");
                 break;
             case R.id.nav_profil_layout:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new ProfilFragment()).commit();
+                changeFragment("profil");
                 break;
             case R.id.nav_editprofil_layout:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new ProfilEditFragment()).commit();
+                changeFragment("editprofil");
                 break;
             case R.id.nav_logout:
                 Toast.makeText(getApplicationContext(), "Logout", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new LoginFragment()).commit();
+                changeFragment("login");
                 break;
         }
 
