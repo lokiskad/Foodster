@@ -31,13 +31,17 @@
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="Maps" />
             <item
-                android:id="@+id/nav_logout"
+                android:id="@+id/nav_chat"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Logout" />
+                android:title="Chat" />
             <item
                 android:id="@+id/nav_receipts"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Rezepte (Noch in Bearbeitung)" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Logout" />
         </group>
 
 </menu>

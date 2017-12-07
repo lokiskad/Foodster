@@ -29,9 +29,18 @@
 
         <Button
             android:id="@+id/buttonLogin"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login" />
+            android:text="Login"
+            android:layout_gravity="center" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_gSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
@@ -39,9 +48,9 @@
         android:id="@+id/loginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop="48dp"
         android:text="Login"
         android:textAppearance="@android:style/TextAppearance.Material.Large" />
 
@@ -49,9 +58,9 @@
         android:id="@+id/textViewSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/linearLayout"
-        android:layout_marginTop="67dp"
+        android:layout_marginBottom="52dp"
         android:text="Noch kein Account? Hier klicken!"
         android:textAlignment="center" />
 

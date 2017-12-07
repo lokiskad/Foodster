@@ -155,6 +155,11 @@ public class MainActivity extends AppCompatActivity
                 mAuth.signOut();
                 changeFragment("login");
                 break;
+            case R.id.nav_chat:
+                changeFragment("chat");
+                break;
+            case R.id.nav_receipts:
+                changeFragment("recipes");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -188,6 +193,15 @@ public class MainActivity extends AppCompatActivity
                 break;
             case "editprofil":
                 fragmentManager.beginTransaction().replace(R.id.content_frame, new ProfilEditFragment()).commit();
+                break;
+            case "chat":
+                fragmentManager.beginTransaction().replace(R.id.content_frame, new ChatFragment()).commit();
+                break;
+            case "profil2":
+                fragmentManager.beginTransaction().replace(R.id.content_frame, new ProfilLapitFragment()).commit();
+                break;
+            case "recipes":
+                fragmentManager.beginTransaction().replace(R.id.content_frame, new RecipeFragment()).commit();
         }
     }
 

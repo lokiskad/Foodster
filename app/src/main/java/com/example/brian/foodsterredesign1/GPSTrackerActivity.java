@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 
 /**
@@ -46,7 +47,6 @@ public class GPSTrackerActivity extends Activity implements GoogleApiClient.Conn
     @Override
     public void onConnected(Bundle bundle) {
         try {
-
             mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                     mGoogleApiClient);
             if (mLastLocation != null) {
