@@ -1,5 +1,6 @@
 package com.example.brian.foodsterredesign1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
@@ -70,7 +71,6 @@ public class MainActivity extends AppCompatActivity
                     navigationView.getMenu().setGroupVisible(R.id.group_registered, false);
                     changeFragment("register");
                 }
-                // ...
             }
         };
     }
@@ -160,6 +160,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_receipts:
                 changeFragment("recipes");
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -197,11 +198,9 @@ public class MainActivity extends AppCompatActivity
             case "chat":
                 fragmentManager.beginTransaction().replace(R.id.content_frame, new ChatFragment()).commit();
                 break;
-            case "profil2":
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new ProfilLapitFragment()).commit();
-                break;
             case "recipes":
                 fragmentManager.beginTransaction().replace(R.id.content_frame, new RecipeFragment()).commit();
+                break;
         }
     }
 

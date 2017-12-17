@@ -29,7 +29,7 @@
             <item
                 android:id="@+id/nav_map_layout"
                 android:icon="@drawable/ic_menu_slideshow"
-                android:title="Maps" />
+                android:title="In der Nähe" />
             <item
                 android:id="@+id/nav_chat"
                 android:icon="@drawable/ic_menu_share"
